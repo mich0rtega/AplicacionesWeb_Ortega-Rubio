@@ -1,0 +1,126 @@
+<!DOCTYPE html>  <!--DOCTYPE: EL TIPO DE DOCUMENTO-->
+<html lang="es">
+<head> <!--CABECERA-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+   
+</head>
+<body><!--CUERPO-->
+    <!-- Barra de navegación -->
+    <div class="encabezado">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="slider">
+         <img src="images/sliders/Facebook header - cover photo.jpg" alt="Portada 1" class="slider active">
+         <img src="images/sliders/soft teddy bears layouts header layout twitter twt headers lq low quality.jpg" alt="Portada 2" class="slider active">
+         <img src="images/sliders/♡.jpg" alt="Portada 3" class="slider active">
+         <img src="images/sliders/Register - Login.jpg"alt="Portada 4" class="slider active">
+         <img src="images/sliders/descarga (3).jpg"alt="Portada 4" class="slider active">
+        </div>
+
+    </div>
+
+    <script src="scripts/slider.js"></script>
+    
+     
+   
+
+    <!-- Sección principal -->
+    <section id="Inicio">
+        <hr>
+        <h1>T e d d y S t o r e</h1>
+        <hr>
+        <p>Esta página fue creada para practicar los conocimientos básicos sobre HTML Y CSS, buscando aprender más y prepararnos para integradora</p>
+    </section>
+
+    <!-- Sección Compras -->
+    <section id="Productos">
+        <hr>
+        <h2>Compras</h2>
+        <p>COMO COMPRAR?</p>
+        <ul>
+            <li>Visualice el producto deseado</li>
+            <li>Selecciona Comprar</li>
+            <li>Paga</li>
+        </ul>
+    </section>
+    <!-- Seccion Catalogo de productos -->
+    <section id="galeria de productos">
+        <div class="galeria">
+            
+            <div class="productos">
+                <h3>Push Toy Bunny</h3>
+                <p>Gray Bunny</p>
+                <img src="images/Anglo Dutch Pools and Toys _ Quality Toys for Kids, Pool & Spa Supply.jpg" alt="conejito" >
+                <button onclick="redirigirAPago()"><b>comprar</b></button>
+
+            </div>
+            <div class="productos">
+                <h3>Push Penguin</h3>
+                <p>Green penguin with a dress of dinasur</p>
+                <img src="images/Aurora World Pompom Penguin - 7__ Pompom Dino, Green (1).jpg" alt="pinbuino" >
+                <button onclick="redirigirAPago()"><b>comprar</b></button>
+
+            </div>
+            <div class="productos">
+                <h3>Plush Dino</h3>
+                <p>green dino teddy push</p>
+                <img src="images/Rawr the Stuffed T-Rex 5 Inch Rolly Pet Plush by Aurora.jpg" alt="dino" >
+                <button onclick="redirigirAPago()"><b>comprar</b></button>
+
+            </div>
+            <div class="productos">
+                <h3>Plush Elephant</h3>
+                <p>push gray elephant </p>
+                <img src="images/Easy Calm Down Kit for Sensory Needs and Fidgeting.jpg" alt="elep" >
+                <button onclick="redirigirAPago()"><b>comprar</b></button>
+
+            </div>
+            <div class="productos">
+                <h3>Push Winnie Poo</h3>
+                <p>Teddy push winnie poo yelow</p>
+                <img src="images/Disney World Dining Tips and Tricks (plus how to save money on food!) (September 2024).jpg" alt="elep" >
+                <button onclick="redirigirAPago()"><b>comprar</b></button>
+
+            </div>
+            
+
+    </section>
+
+    <script>
+        function redirigirAPago() {
+            window.location.href = "compras.html";  // Redirige a la página de pago
+        }
+    </script>
+    
+
+    <!-- Formulario de contacto -->
+    <section id="contacto">
+        <h2>Contactame</h2>
+        <form action="#" method="post">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            <br>
+            <input type="submit" value=Enviar>
+        </form>
+    </section>
+    
+</body>
+</html>
