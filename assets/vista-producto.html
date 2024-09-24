@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de Pago</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+<body>
+    <div class="encabezado">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Productos</a></li>
+                <li><a href="index.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="slider">
+         <img src="images/sliders/Facebook header - cover photo.jpg" alt="Portada 1" class="slider active">
+         <img src="images/sliders/soft teddy bears layouts header layout twitter twt headers lq low quality.jpg" alt="Portada 2" class="slider active">
+         <img src="images/sliders/♡.jpg" alt="Portada 3" class="slider active">
+         <img src="images/sliders/Register - Login.jpg"alt="Portada 4" class="slider active">
+         <img src="images/sliders/descarga (3).jpg"alt="Portada 4" class="slider active">
+        </div>
+
+    </div>
+
+    <script src="scripts/slider.js"></script>
+
+    
+        
+    
+    <h1>Comprar producto</h1>
+    <div class="productos">
+    <h2 id="nombre_producto">Nombre</h2>
+    <img id="imagen_producto" src="#" alt="" onclick="openModal()">
+    <p id="descripcion_producto">Descripcion:</p>
+    <h2 id="precio_producto">Precio:</h2>
+    </div>
+   
+    <form action="#" method="post">
+        <label for="name">Nombre Completo:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+    
+        <label for="phone">Teléfono:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+        <br>
+    
+        <label for="direccion">Dirección de Envío:</label>
+        <input type="text" id="direccion" name="direccion" required>
+        <br>    
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" required>
+        <br>
+    
+        <label for="terminos">Acepto los términos y condiciones</label>
+        <input type="checkbox" id="terminos" name="terminos" required>
+        <br>
+    
+        <input type="submit" value="Enviar">
+    </form>
+    <script src="productos_ver.js"> </script>
+</body>
+</html>
