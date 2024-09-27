@@ -185,3 +185,67 @@ p{
 hr{
     width: 50%;
 }
+
+/* Estilo para contenedor principal del producto */
+.product-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+/* Estilo para la imagen del producto */
+.product-image {
+    flex: 1;
+    max-width: 40%; /* La imagen ocupa un máximo del 40% del ancho */
+    margin-right: 20px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Estilo para la información del producto */
+.product-info {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.product-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.product-info h2#precio_producto {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e67e22;
+}
+
+/* Formulario */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
