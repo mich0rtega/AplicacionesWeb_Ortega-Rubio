@@ -8,7 +8,7 @@ from .models import Usuarios, Productos
 #Ver Usuario
 class UsuariosListView(ListView):
     model = Usuarios
-    template_name = 'templates/usuarios_list.html'
+    template_name = 'templates/usuarios-list.html'
     context_object_name = 'usuarios'
 
 #Crear Usuario

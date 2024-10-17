@@ -16,7 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app1.views import (
+    UsuariosListView, UsuariosCreateView, UsuariosUpdateView, UsuariosDeleteView,
+    ProductosListView, ProductosCreateView, ProductosUpdateView, ProductosDeleteView
+)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # CRUD Usuarios
+    path('usuarios/', UsuariosListView.as_view(), name='usuarios-list'),
+    path('usuarios/new/', UsuariosCreateView.as_view(), name='usuarios-create'),
+    path('usuarios/<int:pk>/edit/', UsuariosUpdateView.as_view(), name='usuarios-update'),
+    path('usuarios/<int:pk>/delete/', UsuariosDeleteView.as_view(), name='usuarios-delete'),
+
+    # CRUD Productos
+    path('productos/', ProductosListView.as_view(), name='productos-list'),
+    path('productos/new/', ProductosCreateView.as_view(), name='productos-create'),
+    path('productos/<int:pk>/edit/', ProductosUpdateView.as_view(), name='productos-update'),
+    path('productos/<int:pk>/delete/', ProductosDeleteView.as_view(), name='productos-delete'),
 ]
