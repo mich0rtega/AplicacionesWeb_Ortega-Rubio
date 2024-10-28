@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app1',
 ]
 
 MIDDLEWARE = [
@@ -78,9 +79,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'teddystore',
         'USER':'root',
-        'PASSWORD': 'mich',
+        'PASSWORD': '',
         'HOST': 'localhost',
-        'PORT': '3306'
+        'PORT': '',
+        
     }
 }
 

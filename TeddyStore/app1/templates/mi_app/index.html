@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link rel="stylesheet" href="{% static 'mi_app/css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="encabezado">
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'lista_usuarios' %}">Usuarios</a></li>
+                <li><a href="{% url 'agregar_producto' %}">Añadir Producto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section id="Inicio">
+        <h1>T e d d y S t o r e</h1>
+        <p>Esta página fue creada para practicar los conocimientos básicos sobre HTML Y CSS.</p>
+    </section>
+    <section id="Productos">
+        <h2>Productos</h2>
+        <div class="galeria">
+            {% for producto in productos %}
+                <div class="productos">
+                    <h3>{{ producto.nombre }}</h3>
+                    <p>{{ producto.descripcion }}</p>
+                    <img src="{% static 'mi_app/images/' %}{{ producto.cod_producto }}.jpg" alt="{{ producto.nombre }}">
+                    <a href="{% url 'vista_producto' producto.cod_producto %}">Ver Producto</a>
+                    <a href="{% url 'eliminar_producto' producto.cod_producto %}">Eliminar</a>
+                    <a href="{% url 'actualizar_producto' producto.cod_producto %}">Actualizar</a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</body>
+</html>

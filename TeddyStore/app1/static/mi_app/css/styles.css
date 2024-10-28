@@ -1,0 +1,38 @@
+/* static/mi_app/css/styles.css */
+body {
+    font-family: 'PT Serif', serif;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.productos {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+.product-container {
+    display: flex;
+    margin: 20px;
+}
+
+.product-image {
+    flex: 1;
+}
+
+.product-info {
+    flex: 2;
+    padding-left: 20px;
+}

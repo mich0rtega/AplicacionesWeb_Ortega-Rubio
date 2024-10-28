@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ producto.nombre }}</title>
+    <link rel="stylesheet" href="{% static 'mi_app/css/styles.css' %}">
+</head>
+<body>
+    <div class="encabezado">
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'lista_usuarios' %}">Usuarios</a></li>
+                <li><a href="{% url 'agregar_producto' %}">Añadir Producto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="product-container">
+        <div class="product-image">
+            <img src="{% static 'mi_app/images/' %}{{ producto.cod_producto }}.jpg" alt="{{ producto.nombre }}">
+        </div>
+        <div class="product-info">
+            <h2>{{ producto.nombre }}</h2>
+            <p>{{ producto.descripcion }}</p>
+            <h2>${{ producto.precio }}</h2>
+        </div>
+    </div>
+</body>
+</html>
